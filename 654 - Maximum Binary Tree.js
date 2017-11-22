@@ -44,21 +44,18 @@ function changeNode(node, num) {
 }
 
 function constructTree(acc, num) {
-  let root;
+  let root = acc;
   if (num > acc.val) {
     root = changeNode(acc, num);
-  } else {
-    if (acc.right) {
-      if (num > acc.right.val) {
-        const node = changeNode(acc.right, num);
-        acc.right = node;
-      } else {
-        acc.right = constructTree(acc.right, num);
-      }
+  } else if (acc.right) {
+    if (num > acc.right.val) {
+      const node = changeNode(acc.right, num);
+      acc.right = node;
     } else {
-      acc.right = new TreeNode(num);
+      acc.right = constructTree(acc.right, num);
     }
-    root = acc;
+  } else {
+    acc.right = new TreeNode(num);
   }
 
   return root;
