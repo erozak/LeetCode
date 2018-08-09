@@ -38,10 +38,11 @@ function notSelfDividing(self, num) {
   return checked;
 }
 
-var selfDividingNumbers = function (left, right) {
+// eslint-disable-next-line no-unused-vars
+function selfDividingNumbers(left, right) {
   const result = [];
 
-  numList:for (let i = left; i <= right ; i++) {
+  numList:for (let i = left; i <= right; i++) {
     const num = i.toString();
     for (let j = 0; j < num.length; j++) {
       if (notSelfDividing(i, Number(num.charAt(j)))) {
@@ -52,4 +53,4 @@ var selfDividingNumbers = function (left, right) {
   }
 
   return result;
-};
+}

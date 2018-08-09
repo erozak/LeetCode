@@ -28,7 +28,9 @@ function returns 0 when the reversed integer overflows.
  * @param {number} x
  * @return {number}
  */
-var reverse = function (x) {
+
+// eslint-disable-next-line no-unused-vars
+function reverse(x) {
   const reverseInt = (num) => {
     const isNegative = num < 0;
     const numAbs = Math.abs(num);
@@ -44,5 +46,5 @@ var reverse = function (x) {
 
   const reversedNum = reverseInt(x);
 
-  return is32Bit(reversedNum) ? reversedNum  : 0;
-};
+  return is32Bit(reversedNum) ? reversedNum : 0;
+}

@@ -16,28 +16,30 @@ const tinyURL = 'http://tinyurl.com';
  * @param {string} longUrl
  * @return {string}
  */
-var encode = function(longUrl) {
-    let key = '';
 
-    while (key.length <= 7) {
-      const randCharIndex = Math.floor((Math.random() * 1000000)) % charList.length;
-      key += charList.charAt(randCharIndex);
-    }
+// eslint-disable-next-line no-unused-vars
+function encode(longUrl) {
+  let key = '';
 
-    let index = 0;
-    let mapArray;
+  while (key.length <= 7) {
+    const randCharIndex = Math.floor((Math.random() * 1000000)) % charList.length;
+    key += charList.charAt(randCharIndex);
+  }
 
-    if (urlMap.has(key)) {
-      mapArray = Array.from(urlMap.get(key)).push(longUrl);
-      index = newList.index - 1;
-    } else {
-      mapArray = [ longUrl ];
-    }
+  let index = 0;
+  let mapArray;
 
-    urlMap.set(key, mapArray);
+  if (urlMap.has(key)) {
+    mapArray = Array.from(urlMap.get(key)).push(longUrl);
+    index = newList.index - 1;
+  } else {
+    mapArray = [longUrl];
+  }
 
-    return `${tinyURL}/${key}_${index}`;
-};
+  urlMap.set(key, mapArray);
+
+  return `${tinyURL}/${key}_${index}`;
+}
 
 /**
  * Decodes a shortened URL to its original URL.
@@ -45,16 +47,18 @@ var encode = function(longUrl) {
  * @param {string} shortUrl
  * @return {string}
  */
-var decode = function(shortUrl) {
-    const keyAndIndexAndParameter = shortUrl.slice(shortUrl.lastIndexOf('/') + 1).split('_');
-    const indexAndParameter = keyAndIndexAndParameter[1].split('?');
 
-    const key = keyAndIndexAndParameter[0];
-    const index = Number(indexAndParameter[0]);
+// eslint-disable-next-line no-unused-vars
+const decode = function decode(shortUrl) {
+  const keyAndIndexAndParameter = shortUrl.slice(shortUrl.lastIndexOf('/') + 1).split('_');
+  const indexAndParameter = keyAndIndexAndParameter[1].split('?');
 
-    const orgUrl = urlMap.get(key)[index];
+  const key = keyAndIndexAndParameter[0];
+  const index = Number(indexAndParameter[0]);
 
-    return orgUrl;
+  const orgUrl = urlMap.get(key)[index];
+
+  return orgUrl;
 };
 
 /**

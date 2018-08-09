@@ -18,25 +18,25 @@ You may assume the input string will only contain letters of alphabet.
  * @param {string[]} words
  * @return {string[]}
  */
-var findWords = function(words) {
+
+// eslint-disable-next-line no-unused-vars
+function findWords(words) {
   const rows = [
     new Set('qwertyuiop'.split('')),
     new Set('asdfghjkl'.split('')),
     new Set('zxcvbnm'.split('')),
   ];
-  let result = [];
+  const result = [];
 
-  for(let i = 0; i < words.length; i++) {
+  for (let i = 0; i < words.length; i++) {
     for (let j = 0; j < rows.length; j++) {
-
       const chars = words[i].split('');
       if (chars.every(char => rows[j].has(char.toLowerCase()))) {
         result.push(words[i]);
         break;
       }
-
     }
   }
 
   return result;
-};
+}

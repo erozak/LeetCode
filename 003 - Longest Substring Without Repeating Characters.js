@@ -16,8 +16,10 @@ Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer 
  * @param {string} s
  * @return {number}
  */
-var lengthOfLongestSubstring = function(s) {
-  let charSet = new Set();
+
+// eslint-disable-next-line no-unused-vars
+function lengthOfLongestSubstring(s) {
+  const charSet = new Set();
   let result = 0;
   let i = 0;
   let point = i;
@@ -33,8 +35,7 @@ var lengthOfLongestSubstring = function(s) {
       charSet.add(char);
       i++;
     }
-
   }
 
   return result >= charSet.size ? result : charSet.size;
-};
+}

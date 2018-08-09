@@ -11,9 +11,11 @@ Given s = "hello", return "olleh".
  * @param {string} s
  * @return {string}
  */
-var reverseString = function(s) {
-    return s
-      .split('')
-      .reverse()
-      .join('');
-};
+
+// eslint-disable-next-line no-unused-vars
+function reverseString(s) {
+  return s
+    .split('')
+    .reverse()
+    .join('');
+}

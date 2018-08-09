@@ -27,6 +27,8 @@ Only letters from a ~ z will appear in input strings.
  * @param {string} b
  * @return {number}
  */
-var findLUSlength = function(a, b) {
+
+// eslint-disable-next-line no-unused-vars
+function findLUSlength(a, b) {
   return a === b ? -1 : Math.max(a.length, b.length);
-};
+}

@@ -29,7 +29,9 @@ The range of node's value is in the range of 32-bit signed integer.
  * @param {TreeNode} root
  * @return {number[]}
  */
-var averageOfLevels = function(root) {
+
+// eslint-disable-next-line no-unused-vars
+function averageOfLevels(root) {
   const sumArray = [];
 
   (function treeTravel(node, level) {
@@ -45,8 +47,7 @@ var averageOfLevels = function(root) {
 
     if (node.left) treeTravel(node.left, level + 1);
     if (node.right) treeTravel(node.right, level + 1);
-
-  }) (root, 0);
+  }(root, 0));
 
   return sumArray.map(sum => sum.total / sum.quantity);
-};
+}

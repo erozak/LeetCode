@@ -18,7 +18,9 @@ The length of input array is a positive integer and will not exceed 10, 000
  * @param {number[]} nums
  * @return {number}
  */
-var findMaxConsecutiveOnes = function (nums) {
+
+ // eslint-disable-next-line no-unused-vars
+functionfindMaxConsecutiveOnes (nums) {
   return nums
     .join('')
     .split(/0+/)

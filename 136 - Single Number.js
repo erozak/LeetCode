@@ -11,7 +11,9 @@ Your algorithm should have a linear runtime complexity. Could you implement it w
  * @param {number[]} nums
  * @return {number}
  */
-var singleNumber = function (nums) {
+
+// eslint-disable-next-line no-unused-vars
+function singleNumber(nums) {
   const set = new Set();
 
   for (let i = 0; i < nums.length; i++) {
@@ -23,4 +25,4 @@ var singleNumber = function (nums) {
   }
 
   return Number(Array.from(set).join(''));
-};
+}

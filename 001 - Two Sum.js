@@ -17,7 +17,9 @@ return [0, 1].
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
+
+// eslint-disable-next-line no-unused-vars
+function twoSum(nums, target) {
   let result;
 
   for (let i = 0; i < nums.length - 1; i++) {
@@ -30,4 +32,4 @@ var twoSum = function(nums, target) {
   }
 
   return result;
-};
+}

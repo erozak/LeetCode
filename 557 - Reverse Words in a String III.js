@@ -14,12 +14,14 @@ Note: In the string, each word is separated by single space and there will not b
  * @param {string} s
  * @return {string}
  */
-var reverseWords = function(s) {
-    const arrOfS = s.split(' ');
 
-    return arrOfS
-      .map(str => (
-        str.split('').reverse().join('')
-      ))
-      .join(' ');
-};
+// eslint-disable-next-line no-unused-vars
+function reverseWords(s) {
+  const arrOfS = s.split(' ');
+
+  return arrOfS
+    .map(str => (
+      str.split('').reverse().join('')
+    ))
+    .join(' ');
+}

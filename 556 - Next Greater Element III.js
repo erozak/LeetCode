@@ -16,13 +16,15 @@ Output: -1
  * @param {number} n
  * @return {number}
  */
-var nextGreaterElement = function(n) {
+
+// eslint-disable-next-line no-unused-vars
+function nextGreaterElement(n) {
   const nums = n.toString().split('');
   let maxNumUsed;
   let change = false;
   let greater = -1;
 
-  for (let i = 0; i < nums.length; i++ ) {
+  for (let i = 0; i < nums.length; i++) {
     const a = nums[nums.length - 1 - i];
 
     if (maxNumUsed) {
@@ -61,4 +63,4 @@ var nextGreaterElement = function(n) {
   }
 
   return greater - (Math.pow(2, 31) - 1) > 0 ? -1 : greater;
-};
+}

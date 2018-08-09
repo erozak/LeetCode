@@ -25,7 +25,9 @@ The number in given array is in range [-100,000, 100,000].
  * @param {number[]} candies
  * @return {number}
  */
-var distributeCandies = function(candies) {
+
+// eslint-disable-next-line no-unused-vars
+function distributeCandies(candies) {
   const eachAmount = candies.length / 2;
   const types = new Set();
 
@@ -36,4 +38,4 @@ var distributeCandies = function(candies) {
   }
 
   return types.size;
-};
+}

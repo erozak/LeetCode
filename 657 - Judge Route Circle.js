@@ -18,7 +18,9 @@ Output: false
  * @param {string} moves
  * @return {boolean}
  */
-var judgeCircle = function(moves) {
+
+// eslint-disable-next-line no-unused-vars
+function judgeCircle(moves) {
   const endPosition = moves.split('').reduce((acc, step) => {
     const stepFixed = step.toUpperCase();
 
@@ -28,7 +30,7 @@ var judgeCircle = function(moves) {
     else if (stepFixed === 'L') acc.x--;
 
     return acc;
-  }, {x: 0, y: 0});
+  }, { x: 0, y: 0 });
 
-  return endPosition.x === 0 && endPosition.y === 0 ? true : false;
-};
+  return !!(endPosition.x === 0 && endPosition.y === 0);
+}

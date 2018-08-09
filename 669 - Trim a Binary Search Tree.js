@@ -51,9 +51,11 @@ Output:
  * @param {number} R
  * @return {TreeNode}
  */
-var trimBST = function(root, L, R) {
-  const trimTree = node => {
-    let newNode = node ? node : null;
+
+// eslint-disable-next-line no-unused-vars
+function trimBST(root, L, R) {
+  const trimTree = (node) => {
+    let newNode = node || null;
 
     if (newNode) {
       if (node.val < L) {
@@ -71,4 +73,4 @@ var trimBST = function(root, L, R) {
   };
 
   return trimTree(root);
-};
+}

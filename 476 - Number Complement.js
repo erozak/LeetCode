@@ -24,7 +24,9 @@ Explanation: The binary representation of 1 is 1 (no leading zero bits), and its
  * @param {number} num
  * @return {number}
  */
-var findComplement = function(num) {
+
+// eslint-disable-next-line no-unused-vars
+function findComplement(num) {
   const exp = num > 0 ? Math.floor(Math.log2(num)) + 1 : 1;
   return Number(num) ^ (Math.pow(2, exp) - 1);
-};
+}

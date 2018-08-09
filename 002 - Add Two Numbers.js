@@ -27,10 +27,11 @@ function ListNode(val) {
   this.next = null;
 }
 
-var addTwoNumbers = function(l1, l2) {
+// eslint-disable-next-line no-unused-vars
+function addTwoNumbers(l1, l2) {
   let numA = l1;
   let numB = l2;
-  let sumList = new ListNode(0);
+  const sumList = new ListNode(0);
   let nowNode = sumList;
   let carry = 0;
 
@@ -49,4 +50,4 @@ var addTwoNumbers = function(l1, l2) {
   if (carry) nowNode.next = new ListNode(carry);
 
   return sumList.next;
-};
+}

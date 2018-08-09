@@ -43,10 +43,12 @@ Every integer represented in the list will be between -30000 and 30000.
  * @param {string[]} ops
  * @return {number}
  */
-var calPoints = function(ops) {
+
+// eslint-disable-next-line no-unused-vars
+function calPoints(ops) {
   const scoreStack = [];
 
-  ops.forEach(operation => {
+  ops.forEach((operation) => {
     const op = operation.toUpperCase();
     if (op === 'C') {
       scoreStack.pop();
@@ -63,4 +65,4 @@ var calPoints = function(ops) {
   });
 
   return scoreStack.reduce((acc, score) => acc + score, 0);
-};
+}

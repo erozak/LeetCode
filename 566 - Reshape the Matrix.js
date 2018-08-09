@@ -48,7 +48,9 @@ The given r and c are all positive.
  * @param {number} c
  * @return {number[][]}
  */
-var matrixReshape = function(nums, r, c) {
+
+// eslint-disable-next-line no-unused-vars
+function matrixReshape(nums, r, c) {
   let newMatrix = nums;
 
   if (newMatrix && newMatrix[0]) {
@@ -60,7 +62,7 @@ var matrixReshape = function(nums, r, c) {
       let newRaw = [];
 
       nums.forEach(row => (
-        row.forEach(col => {
+        row.forEach((col) => {
           newRaw.push(col);
           if (newRaw.length === c) {
             tempMatrix.push(newRaw);
@@ -74,4 +76,4 @@ var matrixReshape = function(nums, r, c) {
   }
 
   return newMatrix;
-};
+}

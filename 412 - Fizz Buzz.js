@@ -33,7 +33,9 @@ Return:
  * @param {number} n
  * @return {string[]}
  */
-var fizzBuzz = function(n) {
+
+// eslint-disable-next-line no-unused-vars
+function fizzBuzz(n) {
   const strArray = [];
 
   for (let i = 1; i <= n; i++) {
@@ -44,4 +46,4 @@ var fizzBuzz = function(n) {
   }
 
   return strArray;
-};
+}

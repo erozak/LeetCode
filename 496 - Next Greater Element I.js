@@ -32,8 +32,10 @@ The length of both nums1 and nums2 would not exceed 1000.
  * @param {number[]} nums
  * @return {number[]}
  */
-var nextGreaterElement = function(findNums, nums) {
-  return findNums.map(num => {
+
+// eslint-disable-next-line no-unused-vars
+function nextGreaterElement(findNums, nums) {
+  return findNums.map((num) => {
     const indexOfNums = nums.indexOf(num);
     let greater = -1;
 
@@ -46,4 +48,4 @@ var nextGreaterElement = function(findNums, nums) {
 
     return greater;
   });
-};
+}

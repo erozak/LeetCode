@@ -27,11 +27,13 @@ The above arrows point to positions where the corresponding bits are different.
  * @param {number} y
  * @return {number}
  */
-var hammingDistance = function(x, y) {
-    return Number(x ^ y)
-        .toString(2)
-        .split('')
-        .reduce((acc, cur) => (
-            acc + Number(cur)
-        ), 0);
-};
+
+// eslint-disable-next-line no-unused-vars
+function hammingDistance(x, y) {
+  return Number(x ^ y)
+    .toString(2)
+    .split('')
+    .reduce((acc, cur) => (
+      acc + Number(cur)
+    ), 0);
+}

@@ -38,7 +38,9 @@ Note: The merging process must start from the root nodes of both trees.
  * @param {TreeNode} t2
  * @return {TreeNode}
  */
-var mergeTrees = function(t1, t2) {
+
+// eslint-disable-next-line no-unused-vars
+function mergeTrees(t1, t2) {
   function merge(a, b) {
     const vA = (a && a.val) || null;
     const vB = (b && b.val) || null;
@@ -49,7 +51,7 @@ var mergeTrees = function(t1, t2) {
     ) {
       node.left = merge(
         a && a.left,
-        b && b.left
+        b && b.left,
       );
     }
 
@@ -58,7 +60,7 @@ var mergeTrees = function(t1, t2) {
     ) {
       node.right = merge(
         a && a.right,
-        b && b.right
+        b && b.right,
       );
     }
 
@@ -66,4 +68,4 @@ var mergeTrees = function(t1, t2) {
   }
 
   return t1 || t2 ? merge(t1, t2) : null;
-};
+}

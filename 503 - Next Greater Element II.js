@@ -18,7 +18,9 @@ Note: The length of given array won't exceed 10000.
  * @param {number[]} nums
  * @return {number[]}
  */
-var nextGreaterElements = function(nums) {
+
+// eslint-disable-next-line no-unused-vars
+function nextGreaterElements(nums) {
   return nums.map((num, idx, arr) => {
     let greater = -1;
 
@@ -33,5 +35,4 @@ var nextGreaterElements = function(nums) {
 
     return greater;
   });
-
-};
+}

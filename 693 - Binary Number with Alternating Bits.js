@@ -34,6 +34,8 @@ The binary representation of 10 is: 1010.
  * @param {number} n
  * @return {boolean}
  */
-var hasAlternatingBits = function(n) {
-    return n === 1 || /^(10)+1?$/.test((n).toString(2));
-};
+
+// eslint-disable-next-line no-unused-vars
+function hasAlternatingBits(n) {
+  return n === 1 || /^(10)+1?$/.test((n).toString(2));
+}

@@ -44,21 +44,21 @@ Given the list [1,[4,[6]]], return 27. (one 1 at depth 1, one 4 at depth 2, and 
  * @return {number}
  */
 
-var depthSum = function(nestedList) {
+// eslint-disable-next-line no-unused-vars
+function depthSum(nestedList) {
+  function traverse(arr, lvl) {
+    let sum = 0;
 
-    function traverse(arr, lvl) {
-        var sum = 0;
-
-        for(var i = 0; i < arr.length; i++) {
-            if(arr[i].isInteger()) {
-                sum += arr[i].getInteger()*lvl;
-            } else {
-                sum += traverse(arr[i].getList(), lvl + 1);
-            }
-        }
-
-        return sum;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].isInteger()) {
+        sum += arr[i].getInteger() * lvl;
+      } else {
+        sum += traverse(arr[i].getList(), lvl + 1);
+      }
     }
 
-    return traverse(nestedList, 1);
-};
+    return sum;
+  }
+
+  return traverse(nestedList, 1);
+}

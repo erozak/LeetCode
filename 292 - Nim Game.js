@@ -12,6 +12,8 @@ For example, if there are 4 stones in the heap, then you will never win the game
  * @param {number} n
  * @return {boolean}
  */
-var canWinNim = function(n) {
+
+// eslint-disable-next-line no-unused-vars
+function canWinNim(n) {
   return !(n % 4 === 0);
-};
+}

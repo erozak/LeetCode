@@ -19,13 +19,17 @@ All the integers in the array will be in the range of [-10000, 10000].
  * @param {number[]} nums
  * @return {number}
  */
-var arrayPairSum = function(nums) {
+
+// eslint-disable-next-line no-unused-vars
+function arrayPairSum(nums) {
   const sum = nums
     .sort((a, b) => a - b)
-    .reduce((acc, val, index) => (index % 2) === 0
-      ? acc + val
-      : acc
-    , 0);
+    .reduce(
+      (acc, val, index) => ((index % 2) === 0
+        ? acc + val
+        : acc)
+      , 0,
+    );
 
   return sum;
-};
+}

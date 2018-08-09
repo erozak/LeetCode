@@ -43,6 +43,7 @@ function changeNode(node, num) {
   return newNode;
 }
 
+
 function constructTree(acc, num) {
   let root = acc;
   if (num > acc.val) {
@@ -61,7 +62,8 @@ function constructTree(acc, num) {
   return root;
 }
 
-var constructMaximumBinaryTree = function (nums) {
+// eslint-disable-next-line no-unused-vars
+function constructMaximumBinaryTree(nums) {
   tree = null;
 
   if (nums && nums.length > 0) {
@@ -71,4 +73,4 @@ var constructMaximumBinaryTree = function (nums) {
   }
 
   return tree;
-};
+}

@@ -20,8 +20,9 @@ Explanation: The perimeter is the 16 yellow stripes in the image below:
  * @param {number[][]} grid
  * @return {number}
  */
-var islandPerimeter = function(grid) {
 
+// eslint-disable-next-line no-unused-vars
+function islandPerimeter(grid) {
   const calcP = (acc, col) => {
     let isAside = false;
 
@@ -43,7 +44,7 @@ var islandPerimeter = function(grid) {
         i++;
       }
     } else {
-      col.forEach(block => {
+      col.forEach((block) => {
         if (block === 1) {
           acc.sum += isAside ? 2 : 4;
           isAside = true;
@@ -62,4 +63,4 @@ var islandPerimeter = function(grid) {
     last: null,
     sum: 0,
   }).sum;
-};
+}

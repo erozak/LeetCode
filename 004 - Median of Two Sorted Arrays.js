@@ -22,7 +22,9 @@ The median is (2 + 3)/2 = 2.5
  * @param {number[]} nums2
  * @return {number}
  */
-var findMedianSortedArrays = function(nums1, nums2) {
+
+ // eslint-disable-next-line no-unused-vars
+function findMedianSortedArrays(nums1, nums2) {
     const amount = nums1.length + nums2.length;
     const medianPos = Math.ceil(amount / 2);
     const isOdd = Boolean(amount % 2);
